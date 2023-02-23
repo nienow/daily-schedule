@@ -1,0 +1,26 @@
+{
+  "name": "jari",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.umd.js",
+  "type": "module",
+  "scripts": {
+    "dev": "rollup -c -m -w",
+    "build": "rollup -c",
+    "start": "sirv public --no-clear"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^24.0.0",
+    "@rollup/plugin-node-resolve": "^15.0.0",
+    "@rollup/plugin-terser": "^0.4.0",
+    "rollup": "^3.15.0",
+    "rollup-plugin-css-only": "^4.3.0",
+    "rollup-plugin-livereload": "^2.0.0",
+    "rollup-plugin-svelte": "^7.1.2",
+    "sirv-cli": "^2.0.0",
+    "svelte": "^3.55.0"
+  }
+}
