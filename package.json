@@ -2,15 +2,17 @@
   "name": "jari",
   "version": "1.0.0",
   "description": "",
-  "main": "index.umd.js",
+  "main": "src/index.js",
   "type": "module",
   "scripts": {
-    "dev": "live-server"
+    "dev": "vite",
+    "build": "vite build"
   },
   "keywords": [],
   "author": "",
   "license": "MIT",
   "devDependencies": {
-    "live-server": "^1.2.2"
+    "live-server": "^1.2.2",
+    "vite": "^4.1.4"
   }
 }

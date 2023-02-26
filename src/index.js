@@ -19,6 +19,9 @@ function init() {
     startDate.valueAsDate = today;
     today.setMonth(today.getMonth() + 3);
     endDate.valueAsDate = today;
+
+    document.getElementById('previewBtn').addEventListener('click', preview);
+    document.getElementById('printBtn').addEventListener('click', print);
 }
 
 init();
