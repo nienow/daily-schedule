@@ -4,7 +4,6 @@ var MONTHS = ['January','February','March','April','May','June','July','August',
 
 const params = new URLSearchParams(window.location.search);
 
-
 const startDate = new Date(`${params.get('startDate')}T00:00:00`);
 const endDate = new Date(`${params.get('endDate')}T00:00:00`);
 const startTime = Number(params.get('startTime'));
@@ -46,15 +45,4 @@ for (let i = 0; i < numDays + 1; i++) {
 }
 
 document.getElementById('output').innerHTML = body;
-
-
-function print() {
-    var prtContent = document.getElementById('output');
-    var WinPrint = window.open('', '', 'toolbar=0,scrollbars=0,status=0');
-    WinPrint.document.write(prtContent.innerHTML);
-    WinPrint.document.close();
-    WinPrint.focus();
-    WinPrint.print();
-    WinPrint.close();
-}
 

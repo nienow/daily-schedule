@@ -1,41 +1,8 @@
 <html>
 <head>
-    <style>
-        @media print {
-            @page { margin: 0; }
-        }
-        body {
-            font-family: Helvetica;
-        }
-        .title {
-            font-size: .4in;
-            font-weight: bold;
-            text-align: center;
-            letter-spacing: 2px;
-            margin-bottom: 0.35in;
-        }
-        .page {
-            page-break-after: always;
-            margin: 0.75in;
-        }
-        .hour {
-            display: flex;
-        }
-        .time {
-            font-size: 18px;
-            flex: 0 0 auto;
-            align-self: end;
-            width: 40px;
-        }
-        .line {
-            flex: 1 1 auto;
-            border-bottom: 1px solid black;
-            /*height: 0.5in;*/
-        }
-    </style>
+    <link rel="stylesheet" href="generate.css"/>
 </head>
 <body>
-<button onclick="print()">Print</button>
 <div id="output"></div>
 <script src="generate.umd.js"></script>
 </body>
