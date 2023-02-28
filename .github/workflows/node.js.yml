@@ -18,4 +18,6 @@ jobs:
           cache: 'pnpm'
       - run: pnpm install
       - run: pnpm run build
-      - run: ../commit.sh
+      - run: bash .github/commit.sh
+        env:
+          API_TOKEN_GITHUB: ${{ secrets.RANDOMBITS_TOKEN }}
