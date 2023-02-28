@@ -4,7 +4,7 @@ body {
     display: flex;
     flex-direction: column;
 }
-header {
+settings {
     flex: 0 0 auto;
 }
 form {
@@ -13,7 +13,7 @@ form {
 field {
     padding: 0 10px;
 }
-main {
+output {
     flex: 1 1 auto;
 }
 iframe {

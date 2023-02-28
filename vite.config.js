@@ -2,6 +2,7 @@ import { resolve } from 'path'
 import { defineConfig } from 'vite'
 
 export default defineConfig({
+    base: '',
     build: {
         polyfillModulePreload: false,
 
@@ -11,8 +12,11 @@ export default defineConfig({
                 generate: 'generate.html',
             },
             output: {
-                dir: 'dist'
-            }
+                dir: 'dist',
+                assetFileNames: '[name]-[hash][extname]',
+                chunkFileNames: '[name]-[hash][extname]',
+                entryFileNames: '[name]-[hash].js'
+            },
         },
     },
 })
