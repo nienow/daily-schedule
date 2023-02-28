@@ -5,7 +5,7 @@ set -u  # script fails if trying to access an undefined variable
 
 echo
 echo "##### Starting #####"
-SOURCE_FILES="dist"
+SOURCE_FILES="dist/."
 DESTINATION_USERNAME="nienow"
 DESTINATION_REPOSITORY="randombits"
 DESTINATION_BRANCH="main"
