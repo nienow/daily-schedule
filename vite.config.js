@@ -2,14 +2,14 @@ import { resolve } from 'path'
 import { defineConfig } from 'vite'
 
 export default defineConfig({
-    base: '',
+    base: '/print-schedule/',
     build: {
         polyfillModulePreload: false,
 
         rollupOptions: {
             input: {
                 index: 'index.html',
-                generate: 'generate.html',
+                _generate: '_generate.html',
             },
             output: {
                 dir: 'dist',

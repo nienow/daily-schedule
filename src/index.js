@@ -2,7 +2,7 @@ function preview(event)  {
     event.preventDefault();
     const formData = new FormData(document.forms.generate);
     const queryParams = new URLSearchParams(formData).toString();
-    document.getElementById('output').src = 'generate.html?' + queryParams;
+    document.getElementById('output').src = '_generate.html?' + queryParams;
     document.getElementById('printBtn').style.visibility = 'visible';
 }
 
