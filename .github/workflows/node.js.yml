@@ -18,13 +18,4 @@ jobs:
           cache: 'pnpm'
       - run: pnpm install
       - run: pnpm run build
-      - uses: nkoppel/push-files-to-another-repository@v1.1.1
-        env:
-          API_TOKEN_GITHUB: ${{ secrets.RANDOMBITS_TOKEN }}
-        with:
-          source-files: 'dist/'
-          destination-branch: main
-          destination-username: 'nienow'
-          destination-repository: 'randombits'
-          destination-directory: 'content/print-schedule'
-          commit-email: 'no-reply@randombits.dev'
+      - run: ../commit.sh
