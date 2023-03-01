@@ -10,7 +10,7 @@ DESTINATION_USERNAME="nienow"
 DESTINATION_REPOSITORY="randombits"
 DESTINATION_BRANCH="main"
 DESTINATION_DIRECTORY="content/print-schedule"
-COMMIT_USERNAME="nienow"
+COMMIT_USERNAME="system"
 COMMIT_EMAIL="system@randombits.dev"
 COMMIT_MESSAGE="Updating content from jari"
 
@@ -43,6 +43,7 @@ ls -la "$CLONE_DIRECTORY"
 
 echo
 echo "##### Copying contents to git repo #####"
+rm -rvf "$CLONE_DIRECTORY/$DESTINATION_DIRECTORY"
 mkdir -p "$CLONE_DIRECTORY/$DESTINATION_DIRECTORY"
 cp -rvf $SOURCE_FILES "$CLONE_DIRECTORY/$DESTINATION_DIRECTORY"
 cd "$CLONE_DIRECTORY"
