@@ -22,4 +22,4 @@ jobs:
         env:
           API_TOKEN_GITHUB: ${{ secrets.RANDOMBITS_TOKEN }}
         with:
-          destination-directory: 'print-schedule'
+          destination-directory: 'tools/print-schedule'

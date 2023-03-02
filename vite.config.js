@@ -2,7 +2,7 @@ import { resolve } from 'path'
 import { defineConfig } from 'vite'
 
 export default defineConfig({
-    base: '/print-schedule/',
+    base: '/tools/print-schedule/',
     build: {
         polyfillModulePreload: false,
 
