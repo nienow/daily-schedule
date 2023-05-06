@@ -4,6 +4,7 @@ function preview(event)  {
     const queryParams = new URLSearchParams(formData).toString();
     document.getElementById('output').src = '/tools/print-schedule/_generate.html?' + queryParams;
     document.getElementById('printBtn').style.visibility = 'visible';
+    document.getElementById('output').parentElement.style.visibility = 'visible';
 }
 
 function print(event) {
