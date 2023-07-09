@@ -18,8 +18,3 @@ jobs:
           cache: 'pnpm'
       - run: pnpm install
       - run: pnpm run build
-      - uses: nienow/randombits-push@main
-        env:
-          API_TOKEN_GITHUB: ${{ secrets.RANDOMBITS_TOKEN }}
-        with:
-          destination-directory: 'tools/print-schedule'
