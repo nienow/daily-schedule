@@ -9,7 +9,7 @@ body {
 
 .main-container {
     margin: 0 auto;
-    max-width: 1200px;
+    max-width: 600px;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -17,34 +17,31 @@ body {
 }
 
 h1 {
-    font-size: 50px;
+    font-size: 2rem;
 }
 
-form {
-    display: flex;
-}
-field {
-    padding: 0 10px;
+.field-list {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    align-items: center;
+    gap: 10px;
 }
 iframe {
     height: 100%;
     width: 100%;
+    border: 1px solid #333;
+}
+label {
+    text-align: right;
+    padding-right: 10px;
 }
 
 .iframe-container {
     flex: 1 1 auto;
 }
 
-button#printBtn {
-    visibility: hidden;
-}
-
 .footer {
     padding: 20px;
-}
-
-.card {
-    border: 1px solid #333;
 }
 
 input, select {
@@ -52,6 +49,45 @@ input, select {
 }
 
 button {
-    margin: 0 5px;
+    padding: 8px 20px;
     cursor: pointer;
+    border: none;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #ddd;
+}
+
+button.primary {
+    background-color: #4CAF50;
+    color: white;
+    width: 200px;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+button.primary:hover {
+    background-color: #3e8e41;
+}
+#prefill {
+    margin-top: 20px;
+}
+
+#prefill > div {
+    display: flex;
+    align-items: center;
+}
+#prefill button {
+    padding: 3px 10px;
+    font-size: 12px;
+    font-weight: normal;
+}
+#prefill input {
+    display: block;
+    background-color: inherit;
+    border: none;
+    border-bottom: 1px solid #333;
+    width: 100%;
 }

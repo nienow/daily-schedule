@@ -9,98 +9,56 @@
     <link rel="stylesheet" href="src/index.css">
 </head>
 <body>
-<div class="main-container">
-<h1>Printable Daily Schedule</h1>
-    <div class="">
+<form name="generate" class="main-container">
+    <h1>Printable Daily Schedule</h1>
 
+    <div class="field-list">
+        <label for="startDate">Start Date</label>
+        <input type="date" id="startDate" name="startDate"/>
 
-    <form name="generate">
-        <field>
-            <div>Start Date</div>
-            <input type="date" name="startDate"/>
-        </field>
-        <field>
-            <div>End Date</div>
-            <input type="date" name="endDate"/>
-        </field>
-        <field>
-            <div>Start Time</div>
-            <select name="startTime">
-                <option value="0">12 AM</option>
-                <option value="1">1 AM</option>
-                <option value="2">2 AM</option>
-                <option value="3">3 AM</option>
-                <option value="4">4 AM</option>
-                <option value="5">5 AM</option>
-                <option value="6">6 AM</option>
-                <option value="7">7 AM</option>
-                <option value="8" selected>8 AM</option>
-                <option value="9">9 AM</option>
-                <option value="10">10 AM</option>
-                <option value="11">11 AM</option>
-                <option value="12">12 PM</option>
-                <option value="13">1 PM</option>
-                <option value="14">2 PM</option>
-                <option value="15">3 PM</option>
-                <option value="16">4 PM</option>
-                <option value="17">5 PM</option>
-                <option value="18">6 PM</option>
-                <option value="19">7 PM</option>
-                <option value="20">8 PM</option>
-                <option value="21">9 PM</option>
-                <option value="22">10 PM</option>
-                <option value="23">11 PM</option>
-            </select>
-        </field>
-        <field>
-            <div>End Time</div>
-            <select name="endTime">
-                <option value="0">12 AM</option>
-                <option value="1">1 AM</option>
-                <option value="2">2 AM</option>
-                <option value="3">3 AM</option>
-                <option value="4">4 AM</option>
-                <option value="5">5 AM</option>
-                <option value="6">6 AM</option>
-                <option value="7">7 AM</option>
-                <option value="8">8 AM</option>
-                <option value="9">9 AM</option>
-                <option value="10">10 AM</option>
-                <option value="11">11 AM</option>
-                <option value="12">12 PM</option>
-                <option value="13">1 PM</option>
-                <option value="14">2 PM</option>
-                <option value="15">3 PM</option>
-                <option value="16">4 PM</option>
-                <option value="17" selected>5 PM</option>
-                <option value="18">6 PM</option>
-                <option value="19">7 PM</option>
-                <option value="20">8 PM</option>
-                <option value="21">9 PM</option>
-                <option value="22">10 PM</option>
-                <option value="23">11 PM</option>
-            </select>
-        </field>
-       <field>
-           <div>Lines per Hour</div>
-           <select name="lines">
-               <option>1</option>
-               <option selected>2</option>
-               <option>3</option>
-               <option>4</option>
-           </select>
-       </field>
-        <button id="previewBtn">Preview</button>
-        <button id="printBtn">Print</button>
-    </form>
+        <label for="endDate">End Date</label>
+        <input type="date" id="endDate" name="endDate"/>
     </div>
-    <div class="iframe-container card" style="visibility: hidden; overflow: hidden">
-    <iframe id="output" src="" frameborder="0"></iframe>
+    <div class="day-list">
+        <input type="checkbox" id="monday" name="monday" checked/>
+        <label for="monday">Monday</label>
+        <input type="checkbox" id="tuesday" name="tuesday" checked/>
+        <label for="tuesday">Tuesday</label>
+        <input type="checkbox" id="wednesday" name="wednesday" checked/>
+        <label for="wednesday">Wednesday</label>
+        <input type="checkbox" id="thursday" name="thursday" checked/>
+        <label for="thursday">Thursday</label>
+        <input type="checkbox" id="friday" name="friday" checked/>
+        <label for="friday">Friday</label>
+        <input type="checkbox" id="saturday" name="saturday"/>
+        <label for="saturday">Saturday</label>
+        <input type="checkbox" id="sunday" name="sunday"/>
+        <label for="sunday">Sunday</label>
+
     </div>
-    <div class="footer">
-        Brought to you by <a href="https://randombits.dev">Random Bits Software Engineering</a>
+    <div id="prefill">
+<!--        Prefill <input type="text" id="prefillText" name="prefillText" value="Lunch" style="width: 100px"/>-->
+<!--        from-->
+<!--        <input type="time" id="prefillStart" name="prefillStart" value="12:00" step="1800"/>-->
+<!--        to-->
+<!--        <input type="time" id="prefillEnd" name="prefillEnd" value="13:00" />-->
     </div>
+    <div>
+    <button id="addBtn">Add Row</button>
+    </div>
+    <button id="previewBtn" class="primary">Generate</button>
+</form>
+<div class="iframe-container" style="visibility: hidden; overflow: hidden">
+    <button id="backBtn">&lt; Back</button>
+    <button id="printBtn">Print</button>
+
+    <iframe id="output" src="_generate.html" frameborder="0"></iframe>
 </div>
-
+<template id="prefillTemplate">
+    <div class="prefill-row">
+    <input type="text" name="prefill" autocomplete="off"/>
+        <button name="removePrefill">remove</button>
+    </div>
+</template>
 </body>
 </html>

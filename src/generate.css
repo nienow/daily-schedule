@@ -26,7 +26,12 @@ body {
     width: 40px;
 }
 .line {
-    flex: 1 1 auto;
+    display: flex;
     border-bottom: 1px solid black;
     /*height: 0.5in;*/
+}
+.txt {
+    font-size: 24px;
+    align-self: end;
+    font-weight: bold;
 }
