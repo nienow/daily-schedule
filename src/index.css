@@ -33,7 +33,6 @@ iframe {
 }
 label {
     text-align: right;
-    padding-right: 10px;
 }
 
 .iframe-container {
@@ -90,4 +89,11 @@ button.primary:hover {
     border: none;
     border-bottom: 1px solid #333;
     width: 100%;
+}
+
+.day-list {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    text-align: center;
 }

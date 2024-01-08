@@ -6,15 +6,16 @@ export const getParams = () => {
     const form = document.forms.generate;
     const startDate = new Date(`${form.startDate.value}T00:00:00`);
     const endDate = new Date(`${form.endDate.value}T00:00:00`);
+    const activeDays = [form.sunday.checked, form.monday.checked, form.tuesday.checked, form.wednesday.checked, form.thursday.checked, form.friday.checked, form.saturday.checked];
     const prefill = [];
     form.prefill?.forEach(input => {
         prefill.push(input.value);
     });
-    return {startDate, endDate, prefill};
+    return {startDate, endDate, prefill, activeDays};
 };
 
 export const generate = () => {
-    const {startDate, endDate, prefill} = getParams();
+    const {startDate, endDate, prefill, activeDays} = getParams();
 
     const numDays = Math.round((endDate.getTime() - startDate.getTime()) / DAY);
     const numLines = prefill.length;
@@ -24,6 +25,7 @@ export const generate = () => {
     let body = '';
     for (let i = 0; i < numDays + 1; i++) {
         const day = new Date(startDate.getTime() + DAY * i);
+        if (!activeDays[day.getDay()]) continue;
         const title = `<div class="title">${DAYS[day.getDay()]}, ${MONTHS[day.getMonth()]} ${day.getDate()}</div>`;
 
         const hours = prefill.map(txt => {
