@@ -26,11 +26,13 @@ h1 {
     align-items: center;
     gap: 10px;
 }
+
 iframe {
     height: 100%;
     width: 100%;
     border: 1px solid #333;
 }
+
 label {
     text-align: right;
 }
@@ -70,6 +72,7 @@ button.primary {
 button.primary:hover {
     background-color: #3e8e41;
 }
+
 #prefill {
     margin-top: 20px;
 }
@@ -78,11 +81,13 @@ button.primary:hover {
     display: flex;
     align-items: center;
 }
+
 #prefill button {
     padding: 3px 10px;
     font-size: 12px;
     font-weight: normal;
 }
+
 #prefill input {
     display: block;
     background-color: inherit;
