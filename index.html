@@ -5,7 +5,7 @@
     <title>Printable Daily Schedule · Random Bits</title>
     <meta name="description" content="A simple printable daily schedule for appointments or planning"/>
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
-  <script type="module" crossorigin src="/daily-schedule/index-C9Pdejth.js"></script>
+  <script type="module" crossorigin src="/daily-schedule/index-C7-hCPH6.js"></script>
   <link rel="stylesheet" crossorigin href="/daily-schedule/index-D-UGIURd.css">
 </head>
 <body>
@@ -14,30 +14,30 @@
 
     <div class="field-list">
         <label for="startDate">Start Date</label>
-        <input type="date" id="startDate" name="startDate"/>
+        <input type="date" id="startDate" name="startDate" onchange="updateURL()"/>
 
         <label for="endDate">End Date</label>
         <input type="date" id="endDate" name="endDate"/>
     </div>
     <div class="day-list">
         <div>
-            <input type="checkbox" id="monday" name="monday" checked/>
+            <input type="checkbox" id="monday" name="monday"/>
             <label for="monday">Monday</label>
         </div>
         <div>
-            <input type="checkbox" id="tuesday" name="tuesday" checked/>
+            <input type="checkbox" id="tuesday" name="tuesday"/>
             <label for="tuesday">Tuesday</label>
         </div>
         <div>
-            <input type="checkbox" id="wednesday" name="wednesday" checked/>
+            <input type="checkbox" id="wednesday" name="wednesday"/>
             <label for="wednesday">Wednesday</label>
         </div>
         <div>
-            <input type="checkbox" id="thursday" name="thursday" checked/>
+            <input type="checkbox" id="thursday" name="thursday"/>
             <label for="thursday">Thursday</label>
         </div>
         <div>
-            <input type="checkbox" id="friday" name="friday" checked/>
+            <input type="checkbox" id="friday" name="friday"/>
             <label for="friday">Friday</label>
         </div>
         <div>
@@ -50,16 +50,19 @@
         </div>
     </div>
     <div id="prefill">
-<!--        Prefill <input type="text" id="prefillText" name="prefillText" value="Lunch" style="width: 100px"/>-->
-<!--        from-->
-<!--        <input type="time" id="prefillStart" name="prefillStart" value="12:00" step="1800"/>-->
-<!--        to-->
-<!--        <input type="time" id="prefillEnd" name="prefillEnd" value="13:00" />-->
+        <!--        Prefill <input type="text" id="prefillText" name="prefillText" value="Lunch" style="width: 100px"/>-->
+        <!--        from-->
+        <!--        <input type="time" id="prefillStart" name="prefillStart" value="12:00" step="1800"/>-->
+        <!--        to-->
+        <!--        <input type="time" id="prefillEnd" name="prefillEnd" value="13:00" />-->
     </div>
     <div>
-    <button id="addBtn">Add Row</button>
+        <button id="addBtn">Add Row</button>
     </div>
     <button id="previewBtn" class="primary">Generate</button>
+    <div>
+        <button id="resetBtn">Reset</button>
+    </div>
 </form>
 <div class="iframe-container" style="visibility: hidden; overflow: hidden">
     <button id="backBtn">&lt; Back</button>
@@ -69,7 +72,7 @@
 </div>
 <template id="prefillTemplate">
     <div class="prefill-row">
-    <input type="text" name="prefill" autocomplete="off"/>
+        <input type="text" name="prefill" autocomplete="off"/>
         <button name="removePrefill">remove</button>
     </div>
 </template>
